@@ -1,5 +1,6 @@
 const express = require("express")
 const app = express()
+require("dotenv").config()
 const { initializeDatabase } = require("./db/db.connect")
 const Hotel = require("./models/hotel.models")
 
