@@ -1,8 +1,6 @@
 const express = require("express")
 const app = express()
 require("dotenv").config()
-const { initializeDatabase } = require("./db/db.connect")
-const Hotel = require("./models/hotel.models")
 
 const cors = require("cors")
 const corsOptions = {
@@ -10,6 +8,11 @@ const corsOptions = {
   credentials: true,
   optionSuccessStatus: 200,
 };
+
+
+const { initializeDatabase } = require("./db/db.connect")
+const Hotel = require("./models/hotel.models")
+
 
 app.use(cors(corsOptions)); // middlerware
 
