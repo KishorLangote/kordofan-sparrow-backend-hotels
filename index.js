@@ -65,6 +65,10 @@ initializeDatabase() //call the fn
 //   photos: ["https://example.com/hotel2-photo1.jpg", "https://example.com/hotel2-photo2.jpg"],
 // };
 
+app.get("/", (req, res) => {
+  res.send("Hello hotels!")
+})
+
 async function createNewData(newHotel){
   try{
     const hotel = new Hotel(newHotel)
